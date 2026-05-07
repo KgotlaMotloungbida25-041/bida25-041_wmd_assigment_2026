@@ -1,0 +1,31 @@
+
+    
+
+footer{
+    
+    background-color: light gray;
+    border-top: 1px solid black;
+    margin-top: 40px ;
+    padding-top: 20px;
+    
+}
+.first-link {
+    color: black ;
+    text-decoration: none;
+}
+.second-link {
+    color:black;
+    text-decoration: none;
+}
+.third-link{
+    color: black;
+    text-decoration: none;
+}
+.fourth-link {
+    color: black;
+    text-decoration: none;
+}
+.fifth-link{
+    color: black;
+    text-decoration: none;
+}
