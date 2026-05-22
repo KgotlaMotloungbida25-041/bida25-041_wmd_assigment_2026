@@ -1,31 +1,41 @@
 
     
-
+.navbar{
+    background-color:  black !important;
+    color: white;
+    
+}
+.navbar.nav-link{
+    color:white !important ;
+}
+.navbar.navbar-brand{
+    color:white !important;
+}
 footer{
     
-    background-color: light gray;
+    background-color: black;
     border-top: 1px solid black;
     margin-top: 40px ;
     padding-top: 20px;
-    
+    color: white;
 }
 .first-link {
-    color: black ;
+    color: white;
     text-decoration: none;
 }
 .second-link {
-    color:black;
+    color: white;
     text-decoration: none;
 }
 .third-link{
-    color: black;
+    color: white;
     text-decoration: none;
 }
 .fourth-link {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 .fifth-link{
-    color: black;
+    color: white;
     text-decoration: none;
 }
