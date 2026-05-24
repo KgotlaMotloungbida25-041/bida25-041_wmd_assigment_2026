@@ -56,6 +56,34 @@
    </li> 
     </div>
 </ul>
+    </div>
+     <!-- Search Bar -->
+            <form class="d-flex me-3" role="search">
+                <input class="form-control me-2" type="search" id="searchInput" placeholder="Search gadgets">
+                <button class="btn btn-warning" type="button" onclick="searchProducts()">
+                    Search
+                </button>
+            </form>
+
+            <!-- Icons -->
+            <div class="d-flex align-items-center gap-3">
+
+                <!-- Account Icon -->
+                <a href="account.html" class="text-white fs-5">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+
+                <!-- Cart Icon -->
+                <a href="cart.html" class="text-white fs-5 position-relative">
+                    <i class="bi bi-cart3"></i>
+
+                    <!-- Cart Badge -->
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                        2
+                    </span>
+                </a>
+
+            </div>
 
 </nav>
 <br>
@@ -491,6 +519,29 @@
         </div>
 
     </footer>
+     <script>
+function searchProducts() {
+
+    let input = document.getElementById("searchInput").value.toLowerCase();
+
+    let products = document.querySelectorAll(".product-card");
+
+    products.forEach(function(product) {
+
+        let text = product.textContent.toLowerCase();
+
+        if (text.includes(input)) {
+            product.style.display = "block";
+        } 
+        
+        else {
+            product.style.display = "none";
+        }
+
+    });
+}
+</script>
+
 
 
          

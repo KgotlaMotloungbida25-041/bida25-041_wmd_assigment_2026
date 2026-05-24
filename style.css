@@ -77,6 +77,19 @@ body{
 .navbar-toggler:focus{
     box-shadow: none;
 }
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+    color: #d4a017 !important;
+}
+
+.form-control:focus {
+    border-color: #d4a017;
+    box-shadow: 0 0 5px rgba(212,160,23,0.5);
+}
 .section-title{
     font-weight: bold;
     font-size: 40px;

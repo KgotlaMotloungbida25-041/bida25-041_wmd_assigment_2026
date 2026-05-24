@@ -57,6 +57,34 @@
    </li> 
     </div>
 </ul>
+    </div>
+     <!-- Search Bar -->
+            <form class="d-flex me-3" role="search">
+                <input class="form-control me-2" type="search" id="searchInput" placeholder="Search gadgets">
+                <button class="btn btn-warning" type="button" onclick="searchProducts()">
+                    Search
+                </button>
+            </form>
+
+            <!-- Icons -->
+            <div class="d-flex align-items-center gap-3">
+
+                <!-- Account Icon -->
+                <a href="account.html" class="text-white fs-5">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+
+                <!-- Cart Icon -->
+                <a href="cart.html" class="text-white fs-5 position-relative">
+                    <i class="bi bi-cart3"></i>
+
+                    <!-- Cart Badge -->
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                        2
+                    </span>
+                </a>
+
+            </div>
 
 </nav>
 <br>
@@ -72,7 +100,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Galaxy S26 Ultra Silver Shadow</h5>
                    <p class="price">
-                        <span class="badge bg-primary me-2">NEW</span>
+                        <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
                         <span class="text-success fw-bold fs-5">P21,900</span>
@@ -99,7 +127,7 @@
                     </ul>
                 </p>
                 <p class="price">
-                        <span class="badge bg-primary me-2">NEW</span>
+                        <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
                         <span class="text-success fw-bold fs-5">P18,900</span>
@@ -123,10 +151,10 @@
                 </ul>
             </p>
             <p class="price">
-                        <span class="badge bg-primary me-2">NEW</span>
+                        <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
-                        <span class="text-success fw-bold fs-5">P18,900</span>
+                        <span class="text-success fw-bold fs-5">P15,900</span>
                     </p>
             <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy now</a>
             </div>
@@ -153,7 +181,7 @@
                     </ul>
                 </p>
                 <p class="price">
-                        <span class="badge bg-primary me-2">NEW</span>
+                        <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
                         <span class="text-success fw-bold fs-5">P18,900</span>
@@ -168,10 +196,10 @@
                 <div class="card-body">
                     <h5 class="card-title">Lenovo Yoga Tab Plus</h5>
                     <p class="price">
-                        <span class="badge bg-primary me-2">NEW</span>
+                        <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
-                        <span class="text-success fw-bold fs-5">P11,500</span>
+                        <span class="text-success fw-bold fs-5">P10,500</span>
                     </p>
                     <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy now</a>
                 </div>
@@ -183,7 +211,7 @@
                 <div class="card-body">
                 <h5 class="card-title">Apple Watch Series 9</h5>
                <p class="price">
-                        <span class="badge bg-primary me-2">NEW</span>
+                        <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
                         <span class="text-success fw-bold fs-5">P6,999</span>
@@ -203,10 +231,10 @@
             <div class="card-body">
                 <h5 class="card-title">Samsung Galaxy Watch Ultra</h5>
                 <p class="price">
-                        <span class="badge bg-primary me-2">NEW</span>
+                        <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
-                        <span class="text-success fw-bold fs-5">P8,999</span>
+                        <span class="text-success fw-bold fs-5">P6,000</span>
                     </p>
                 <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy now</a>
             </div>
@@ -218,7 +246,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Samsung Galaxy Ring</h5>
                     <p class="price">
-                        <span class="badge bg-primary me-2">NEW</span>
+                        <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
                         <span class="text-success fw-bold fs-5">P6,499</span>
@@ -234,10 +262,10 @@
                 <h5 class="card-title">Beats Studio Pro Wireless Headphones</h5>
                 <p class="card-text">Price:</p>
                 <p class="price">
-                        <span class="badge bg-primary me-2">NEW</span>
+                        <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
-                        <span class="text-success fw-bold fs-5">P18,900</span>
+                        <span class="text-success fw-bold fs-5">P1,000</span>
                     </p>
                 <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy Now</a>
                 </div>
@@ -298,6 +326,29 @@
         </div>
 
     </footer>
+     <script>
+function searchProducts() {
+
+    let input = document.getElementById("searchInput").value.toLowerCase();
+
+    let products = document.querySelectorAll(".product-card");
+
+    products.forEach(function(product) {
+
+        let text = product.textContent.toLowerCase();
+
+        if (text.includes(input)) {
+            product.style.display = "block";
+        } 
+        
+        else {
+            product.style.display = "none";
+        }
+
+    });
+}
+</script>
+
 
 
 

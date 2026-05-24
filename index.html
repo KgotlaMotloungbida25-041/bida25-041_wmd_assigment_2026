@@ -56,6 +56,39 @@
    </li> 
     
 </ul>
+<div class="d-flex align-items-center gap-3 me-3">
+ <!-- Search Bar -->
+            <form class="d-flex me-3" role="search">
+                <input class="form-control me-2" type="search" id="searchInput" placeholder="Search Gadgets">
+                <button class="btn btn-warning" type="button" onclick="searchProducts()">
+                    Search
+                </button>
+            </form>
+
+            <!-- Icons -->
+            <div class="d-flex align-items-center gap-3">
+
+                <!-- Account Icon -->
+                <a href="account.html" class="text-white fs-5">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+
+                <!-- Cart Icon -->
+                <a href="cart.html" class="text-white fs-5 position-relative">
+                    <i class="bi bi-cart3"></i>
+
+                    <!-- Cart Badge -->
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                        2
+                    </span>
+                </a>
+
+            </div>
+</div>
+
+        </div>
+    </div>
+</nav>
     
 
     </div>
@@ -161,7 +194,7 @@
                     </p>
                         
                     
-                    <a href="checkoutpage.html" class="btn btn-outline-success">Buy now</a>
+                    <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy now</a>
                 </div>
             </div>
 
@@ -187,7 +220,7 @@
                         
                         <span class="text-success fw-bold fs-5">P21,200</span>
                     </p>
-                    <a href="checkoutpage.html" class="btn btn-outline-success">Buy now</a>
+                    <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy now</a>
                 </div>
             </div>
         </div>
@@ -211,7 +244,7 @@
                         
                         <span class="text-success fw-bold fs-5">P18,900</span>
                     </p>
-                    <a href="checkoutpage.html" class="btn btn-outline-success">Buy Now</a>
+                    <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy Now</a>
                 </div>
             </div>
         </div>
@@ -238,7 +271,7 @@
                         <span class="text-muted text-decoration-line-through me-2">P15,999</span>
                         <span class="text-success fw-bold fs-5">P12,999</span>
                     </p>
-                    <a href="checkoutpage.html" class="btn btn-outline-success">Buy now</a>
+                    <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy now</a>
                 </div>
             </div>
         </div>
@@ -262,7 +295,7 @@
                         <span class="text-muted text-decoration-line-through me-2">P27,999</span>
                         <span class="text-success fw-bold fs-5">P23,499</span>
                     </p>
-                    <a href="checkoutpage.html" class="btn btn-outline-success">Buy Now</a>
+                    <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy Now</a>
                 </div>
             </div>
 
@@ -287,7 +320,7 @@
                         <span class="text-muted text-decoration-line-through me-2">P18,500</span>
                         <span class="text-success fw-bold fs-5">P15,500</span>
                     </p>
-                    <a href="checkoutpage.html" class="btn btn-outline-success">Buy Now</a>
+                    <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy Now</a>
 
                 </div>
             </div>
@@ -335,7 +368,7 @@
                      <br>
                        
   
-                         <button type="submit" class="btn btn-primary">Submit</button>
+                         <a href="emailmessage.html" class="btn btn-primary">Submit</a>
                     </form>
                    
 
@@ -348,6 +381,28 @@
         </div>
 
     </footer>
+    <script>
+function searchProducts() {
+
+    let input = document.getElementById("searchInput").value.toLowerCase();
+
+    let products = document.querySelectorAll(".product-card");
+
+    products.forEach(function(product) {
+
+        let text = product.textContent.toLowerCase();
+
+        if (text.includes(input)) {
+            product.style.display = "block";
+        } 
+        
+        else {
+            product.style.display = "none";
+        }
+
+    });
+}
+</script>
 
 
 

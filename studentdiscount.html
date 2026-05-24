@@ -56,6 +56,34 @@
    </li> 
     </div>
 </ul>
+    </div>
+     <!-- Search Bar -->
+            <form class="d-flex me-3" role="search">
+                <input class="form-control me-2" type="search" id="searchInput" placeholder="Search gadgets">
+                <button class="btn btn-warning" type="button" onclick="searchProducts()">
+                    Search
+                </button>
+            </form>
+
+            <!-- Icons -->
+            <div class="d-flex align-items-center gap-3">
+
+                <!-- Account Icon -->
+                <a href="account.html" class="text-white fs-5">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+
+                <!-- Cart Icon -->
+                <a href="cart.html" class="text-white fs-5 position-relative">
+                    <i class="bi bi-cart3"></i>
+
+                    <!-- Cart Badge -->
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                        2
+                    </span>
+                </a>
+
+            </div>
 
 </nav>
 <br>
@@ -107,8 +135,8 @@
                 </p>
                 <p class="price">
                         <span class="badge bg-danger me-2">SALE</span>
-                        <span class="text-muted text-decoration-line-through me-2">P18,500</span>
-                        <span class="text-success fw-bold fs-5">P15,500</span>
+                        <span class="text-muted text-decoration-line-through me-2">P32,500</span>
+                        <span class="text-success fw-bold fs-5">P27,500</span>
                     </p>
                 <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy Now</a>
             </div>
@@ -131,8 +159,8 @@
             </p>
             <p class="price">
                         <span class="badge bg-danger me-2">SALE</span>
-                        <span class="text-muted text-decoration-line-through me-2">P18,500</span>
-                        <span class="text-success fw-bold fs-5">P15,500</span>
+                        <span class="text-muted text-decoration-line-through me-2">P21,500</span>
+                        <span class="text-success fw-bold fs-5">P17,900</span>
                     </p>
             <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy now</a>
             </div>
@@ -184,8 +212,8 @@
                     </p>
                     <p class="price">
                         <span class="badge bg-danger me-2">SALE</span>
-                        <span class="text-muted text-decoration-line-through me-2">P18,500</span>
-                        <span class="text-success fw-bold fs-5">P15,500</span>
+                        <span class="text-muted text-decoration-line-through me-2">P32,500</span>
+                        <span class="text-success fw-bold fs-5">P27,500</span>
                     </p>
                     <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy now</a>
                 </div>
@@ -207,8 +235,8 @@
                 </p>
                 <p class="price">
                         <span class="badge bg-danger me-2">SALE</span>
-                        <span class="text-muted text-decoration-line-through me-2">P18,500</span>
-                        <span class="text-success fw-bold fs-5">P15,500</span>
+                        <span class="text-muted text-decoration-line-through me-2">P32,500</span>
+                        <span class="text-success fw-bold fs-5">P27,500</span>
                     </p>
                 <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy Now</a>
                 </div>
@@ -235,8 +263,8 @@
                 </p>
                 <p class="price">
                         <span class="badge bg-danger me-2">SALE</span>
-                        <span class="text-muted text-decoration-line-through me-2">P18,500</span>
-                        <span class="text-success fw-bold fs-5">P15,500</span>
+                        <span class="text-muted text-decoration-line-through me-2">P32,500</span>
+                        <span class="text-success fw-bold fs-5">P27,500</span>
                     </p>
                 <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy now</a>
             </div>
@@ -248,11 +276,11 @@
                 <img class="card-img-top" src="images/iphone-17e-pink.webp" alt="Product 8">
                 <div class="card-body">
                     <h5 class="card-title">Apple iphone 17e Pink</h5>
-                    <p class="card-text">Price: P10,500.00</p>
+                    
                     <p class="price">
                         <span class="badge bg-danger me-2">SALE</span>
-                        <span class="text-muted text-decoration-line-through me-2">P18,500</span>
-                        <span class="text-success fw-bold fs-5">P15,500</span>
+                        <span class="text-muted text-decoration-line-through me-2">P21,500</span>
+                        <span class="text-success fw-bold fs-5">P18,500</span>
                     </p>
                     
 
@@ -265,11 +293,11 @@
                 <img class="card-img-top" src="images/iphone17e-white.webp" alt="Product 9">
                 <div class="card-body">
                 <h5 class="card-title">Apple Iphone 17e White</h5>
-                <p class="card-text">Price: P10,500.00</p>
+                
                 <p class="price">
                         <span class="badge bg-danger me-2">SALE</span>
-                        <span class="text-muted text-decoration-line-through me-2">P18,500</span>
-                        <span class="text-success fw-bold fs-5">P15,500</span>
+                        <span class="text-muted text-decoration-line-through me-2">P21,500</span>
+                        <span class="text-success fw-bold fs-5">P18,500</span>
                     </p>
                 <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy Now</a>
                 </div>
@@ -330,6 +358,29 @@
         </div>
 
     </footer>
+     <script>
+function searchProducts() {
+
+    let input = document.getElementById("searchInput").value.toLowerCase();
+
+    let products = document.querySelectorAll(".product-card");
+
+    products.forEach(function(product) {
+
+        let text = product.textContent.toLowerCase();
+
+        if (text.includes(input)) {
+            product.style.display = "block";
+        } 
+        
+        else {
+            product.style.display = "none";
+        }
+
+    });
+}
+</script>
+
 
 
 

@@ -61,6 +61,34 @@
    </li> 
     </div>
 </ul>
+    </div>
+     <!-- Search Bar -->
+            <form class="d-flex me-3" role="search">
+                <input class="form-control me-2" type="search" id="searchInput" placeholder="Search gadgets">
+                <button class="btn btn-warning" type="button" onclick="searchProducts()">
+                    Search
+                </button>
+            </form>
+
+            <!-- Icons -->
+            <div class="d-flex align-items-center gap-3">
+
+                <!-- Account Icon -->
+                <a href="account.html" class="text-white fs-5">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+
+                <!-- Cart Icon -->
+                <a href="cart.html" class="text-white fs-5 position-relative">
+                    <i class="bi bi-cart3"></i>
+
+                    <!-- Cart Badge -->
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                        2
+                    </span>
+                </a>
+
+            </div>
 
 </nav>
 <br>
@@ -113,7 +141,7 @@
                         <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
-                        <span class="text-success fw-bold fs-5">P17,999</span>
+                        <span class="text-success fw-bold fs-5">P25,999</span>
                     </p>
             <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy now</a>
             </div>
@@ -135,7 +163,7 @@
                         <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
-                        <span class="text-success fw-bold fs-5">P17,999</span>
+                        <span class="text-success fw-bold fs-5">P25,999</span>
                     </p>
                 <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy now</a>
             </div>
@@ -151,7 +179,7 @@
                         <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
-                        <span class="text-success fw-bold fs-5">P15,999</span>
+                        <span class="text-success fw-bold fs-5">P23,999</span>
                     </p>
                     <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy now</a>
                 </div>
@@ -204,7 +232,7 @@
                         <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
-                        <span class="text-success fw-bold fs-5">P7,499</span>
+                        <span class="text-success fw-bold fs-5">P17,499</span>
                     </p>
                     <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy now</a>
                 </div>
@@ -220,7 +248,7 @@
                         <span class="badge bg-primary me-2">NEW ARRIVAL</span>
                         <span class="text-body">Price:</span>
                         
-                        <span class="text-success fw-bold fs-5">P25,999</span>
+                        <span class="text-success fw-bold fs-5">P30,999</span>
                     </p>
                 <a href="checkoutpage.html" class="btn btn-outline-success" style="width: 270px;">Buy Now</a>
                 </div>
@@ -284,6 +312,29 @@
         </div>
 
     </footer>
+     <script>
+function searchProducts() {
+
+    let input = document.getElementById("searchInput").value.toLowerCase();
+
+    let products = document.querySelectorAll(".product-card");
+
+    products.forEach(function(product) {
+
+        let text = product.textContent.toLowerCase();
+
+        if (text.includes(input)) {
+            product.style.display = "block";
+        } 
+        
+        else {
+            product.style.display = "none";
+        }
+
+    });
+}
+</script>
+
 
 
 
